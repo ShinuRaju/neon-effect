@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 5vh;
+  min-height: 100vh;
+  background-color: black;
+}
+
+[class^="neon"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 100vh;
+  color: white;
+  white-space: nowrap;
+}
+
+[class$="Text1"] h1 {
+  text-shadow: 0 0 7px white, 0 0 10px white, 0 0 21px white, 0 0 42px #fff,
+    0 0 82px #fff, 0 0 102px #fff, 0 0 151px #fff;
+}
+
+[class$="Text2"] h1 {
+  text-shadow: 0 0 7px white, 0 0 10px white, 0 0 21px white, 0 0 42px #0fa,
+    0 0 82px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+}
+
+[class$="Text3"] h1 {
+  text-shadow: 0 0 7px white, 0 0 10px white, 0 0 21px white, 0 0 42px #0fa,
+    0 0 82px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+  animation: flicker 1s infinite alternate;
+}
+
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px white, 0 0 11px white, 0 0 23px white, 0 0 45px #0fa,
+      0 0 89px #0fa, 0 0 1110px #0fa, 0 0 361px #0fa;
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
+[class$="Text4"] h1 {
+  text-shadow: 0 0 7px white, 0 0 10px white, 0 0 21px white, 0 0 42px #0fa,
+    0 0 82px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 4px white, 0 0 11px white, 0 0 23px white, 0 0 45px #0fa,
+      0 0 89px #0fa, 0 0 1110px #0fa, 0 0 361px #0fa;
+  }
+  100% {
+    text-shadow: 0 0 2px white, 0 0 8px white, 0 0 15px white, 0 0 30px #0fa,
+      0 0 85px #0fa, 0 0 90px #0fa, 0 0 130px red;
+  }
+}
+
+div[class$="Text5"] {
+  background: radial-gradient(
+      circle at center,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 1)
+    ),
+    url(https://images.unsplash.com/photo-1538407476027-5a9866ef5b39?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8d2FsbHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=60);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+[class$="Text5"] h1 {
+  text-shadow: 0 0 7px white, 0 0 10px white, 0 0 21px white, 0 0 42px #0fa,
+    0 0 82px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+  animation: flicker 1s infinite alternate;
+}
